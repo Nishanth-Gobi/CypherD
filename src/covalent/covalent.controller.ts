@@ -5,12 +5,14 @@ import { CovalentService, chain_name_id_map } from './covalent.service';
 export class CovalentController {
   constructor(private readonly covalentService: CovalentService) {}
 
-  @Get('balance/:chain_name')
-  async getBalance(@Param('chain_name') chain_name: string) {
-    // return 'hello';
+  @Get('balance/:wallet_address/:chain_name')
+  async getBalance(
+    @Param('wallet_address') wallet_address: string,
+    @Param('chain_name') chain_name: string,
+  ) {
     const result = await this.covalentService.getChainBalance(
       chain_name_id_map[chain_name],
-      '0x6AE65a7033a84bb36778fEA6607A25a0d6c8EE50',
+      wallet_address,
       'ckey_38818174186943dabc55e9832c0',
     );
     return result;
