@@ -51,6 +51,7 @@ export class CovalentService {
       set(item, 'balance', balance);
       set(item, 'logo_url', object.logo_url);
       set(item, 'holding', holding);
+      set(item, 'is_verified', object.quote_rate != null);
 
       total_balance += holding;
 
