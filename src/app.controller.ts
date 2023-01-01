@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getIntro(): string {
-    return 'Hi! This is an API server!';
+  getHome(): string {
+    return 'API server - use `/wallet_address/chain_name` ';
   }
 }
