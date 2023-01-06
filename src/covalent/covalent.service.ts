@@ -65,6 +65,8 @@ export class CovalentService {
         }
         set(balanceResponse, 'updated_at', get(data, 'data.updated_at', ''));
         set(balanceResponse, 'total_balance', total_balance);
+      } else {
+        console.log(promise.reason);
       }
     });
 
