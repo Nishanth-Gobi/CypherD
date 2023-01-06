@@ -46,7 +46,6 @@ export class CovalentService {
     settledPromises.forEach((promise) => {
       const { status } = promise;
       if (status === 'fulfilled') {
-        // chainsData.push(promise.value);
         const { data } = promise.value;
         for (const object of get(data, 'data.items', [])) {
           const balance =

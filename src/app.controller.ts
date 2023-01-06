@@ -7,6 +7,6 @@ export class AppController {
 
   @Get()
   getHome(): string {
-    return 'API server - use `/wallet_address/chain_name` ';
+    return 'API server - use `/wallet_address/chain_name`';
   }
 }

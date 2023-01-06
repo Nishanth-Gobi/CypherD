@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return home', () => {
+      expect(appController.getHome()).toBe(
+        'API server - use `/wallet_address/chain_name`',
+      );
     });
   });
 });
